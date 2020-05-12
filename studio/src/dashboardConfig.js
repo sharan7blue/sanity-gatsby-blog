@@ -1,6 +1,6 @@
 export default {
   widgets: [
-    { name: 'structure-menu' },
+    {name: 'structure-menu'},
     {
       name: 'project-info',
       options: {
@@ -12,16 +12,16 @@ export default {
                 'NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.',
               sites: [
                 {
-                  buildHookId: '5e97363063579d590b276a5f',
+                  buildHookId: '5e9ca69cb6c58b2c6955d569',
                   title: 'Sanity Studio',
-                  name: 'sanity-gatsby-blog-studio-5ksfuzqh',
-                  apiId: '4d8ad167-e39d-4b5a-a1f9-428f4734265a'
+                  name: 'sanity-gatsby-blog-studio-j541bj7v',
+                  apiId: '1aff24ab-1562-4aa0-bb0b-c05c123d43b0'
                 },
                 {
-                  buildHookId: '5e973630efb15b8de5ce8c7e',
+                  buildHookId: '5e9ca69d8e1a5624a681f8b8',
                   title: 'Blog Website',
-                  name: 'sanity-gatsby-blog-web-7aek2cyd',
-                  apiId: '4701ecc9-9580-4eae-931e-db7d90eb283f'
+                  name: 'sanity-gatsby-blog-web-3d35kyw2',
+                  apiId: '1ce17cdb-56a3-4d9c-9862-a648edd78856'
                 }
               ]
             }
@@ -30,18 +30,26 @@ export default {
         data: [
           {
             title: 'GitHub repo',
-            value: 'https://github.com/sharan7blue/sanity-gatsby-blog',
+            value: 'https://github.com/tommyyau/sanity-gatsby-blog',
             category: 'Code'
           },
-          { title: 'Frontend', value: 'https://sanity-gatsby-blog-web-7aek2cyd.netlify.com', category: 'apps' }
+          {
+            title: 'Frontend',
+            value: 'https://sanity-gatsby-blog-web-3d35kyw2.netlify.app',
+            category: 'apps'
+          }
         ]
       }
     },
-    { name: 'project-users', layout: { height: 'auto' } },
+    {name: 'project-users', layout: {height: 'auto'}},
     {
       name: 'document-list',
-      options: { title: 'Recent blog posts', order: '_createdAt desc', types: ['post'] },
-      layout: { width: 'medium' }
+      options: {
+        title: 'Recent Articles',
+        order: '_createdAt desc',
+        types: ['howToArticle', 'featureArticle', 'galleryArticle']
+      },
+      layout: {width: 'medium'}
     }
   ]
 }

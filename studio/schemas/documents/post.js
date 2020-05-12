@@ -39,7 +39,7 @@ export default {
       description:
         'This ends up on summary pages, on Google, when people share your post in social media.'
     },
-    {
+    /*    {
       name: 'authors',
       title: 'Authors',
       type: 'array',
@@ -62,6 +62,20 @@ export default {
         }
       ]
     },
+    {
+      name: 'tags',
+      type: 'array',
+      title: 'Tags',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'tag'
+          }
+        }
+      ]
+    },
+  */
     {
       name: 'body',
       type: 'bodyPortableText',

@@ -1,7 +1,7 @@
 export default {
-  name: 'bodyPortableText',
+  name: 'articlePortableText',
   type: 'array',
-  title: 'Post body',
+  title: 'Article Body',
   of: [
     {
       type: 'block',
@@ -45,15 +45,19 @@ export default {
             ]
           }
         ]
-      },
-      of: [{type: 'blogAuthorReference'}]
+      }
     },
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     {
-      type: 'mainImage',
-      options: {hotspot: true}
+      type: 'figure'
+    },
+    {
+      type: 'youTube'
+    },
+    {
+      type: 'productReference'
     }
   ]
 }

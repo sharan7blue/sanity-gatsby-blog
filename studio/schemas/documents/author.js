@@ -1,39 +1,41 @@
+import {MdPerson} from 'react-icons/md'
+
 export default {
   name: 'author',
   type: 'document',
+  icon: MdPerson,
   title: 'Author',
   fields: [
     {
-      name: 'name',
+      name: 'authorName',
       type: 'string',
       title: 'Name'
+    },
+    {
+      name: 'authorImage',
+      type: 'figure',
+      title: 'Image'
+    },
+    {
+      name: 'bio',
+      type: 'authorBioPortableText',
+      title: 'Biography'
     },
     {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
-      description: 'Some frontends will require a slug to be set to be able to show the person',
       options: {
-        source: 'name',
+        source: 'authorName',
         maxLength: 96
       }
-    },
-    {
-      name: 'image',
-      type: 'mainImage',
-      title: 'Image'
-    },
-    {
-      name: 'bio',
-      type: 'bioPortableText',
-      title: 'Biography'
     }
   ],
   preview: {
     select: {
-      title: 'name',
+      title: 'authorName',
       subtitle: 'slug.current',
-      media: 'image'
+      media: 'authorImage'
     }
   }
 }
